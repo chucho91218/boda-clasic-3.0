@@ -1,0 +1,96 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Festa Wedding - High Contrast Warm Cream & Espresso Deep */
+  --background: #f5eee6; /* Fondo crema cálido */
+  
+  /* TEXTOS Y CONTENIDO - SUBIDO AL MÁXIMO */
+  --foreground: #120f0e; /* Marrón casi negro, contraste total para nombres y títulos */
+  --muted-foreground: #2d2622; /* Antes era claro, ahora es un marrón oscuro muy sólido */
+  
+  /* COMPONENTES Y TARJETAS */
+  --card: #ffffff;
+  --card-foreground: #120f0e;
+  --popover: #ffffff;
+  --popover-foreground: #120f0e;
+  
+  /* COLORES DE ACCIÓN (BOTONES, ICONOS) */
+  --primary: #3d312b; /* Marrón chocolate muy profundo */
+  --primary-foreground: #2b221d;
+  --secondary: #e2d3c5; /* Crema oscuro para que se note la diferencia con el fondo */
+  --secondary-foreground: #120f0e;
+  
+  /* BORDES Y ESTADOS - MUCHO MÁS MARCADOS */
+  --border: #b09c8d; /* Antes era invisible, ahora define bien las cajas de los inputs */
+  --input: #2b221d;
+  --ring: #3d312b;
+  --muted: #2b221d;
+  --accent: #a38671;
+  --accent-foreground: #120f0e;
+  
+  --destructive: #7a1f1f;
+  --destructive-foreground: #2b221d;
+  
+  --radius: 0rem; /* Bordes rectos minimalistas */
+
+  /* COLORES DE MARCA FESTA - MÁS OSCUROS */
+  --gold: #5c4a3f;
+  --gold-light: #8c7465;
+  --gold-dark: #2b221d;
+  --champagne: #2b221d;
+
+
+}
+
+@theme inline {
+  --font-sans: var(--font-raleway), 'Helvetica Neue', sans-serif;
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --font-serif: var(--font-cormorant), 'Georgia', serif;
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
+  --color-champagne: var(--champagne);
+  --color-background: var(--color-background); /* Referencia corregida */
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
